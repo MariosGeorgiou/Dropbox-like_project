@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Mybox</title>
+        <style>
+            #wrapper {
+                margin: 0;
+                padding: 0;
+                min-height:100%;
+                position:relative;
+            }
+            #header {
+                display: block;
+                background: url(/images/header.gif) no-repeat fixed center;
+                background-size: auto;
+                text-align: center;
+                height: 80px;
+                max-width: 100%;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            /*
+            #header_image{
+                position: fixed; 
+                top: 0; 
+                left: 0; 
+
+                /* Preserve aspet ratio
+                min-width: 100%;
+                min-height: 100%;
+            }
+            */
+            #header_logo {
+                height: 70px;
+            }
+            .header_master{
+                top: 15px;
+                right: 105px;
+                bottom: 28px;
+                left: 105px;
+                position: absolute;
+                width: auto;
+                height: 32px;
+                z-index: 3;
+            }
+            .header_login{
+                text-align: right;
+            }
+            #navmenu {
+                display: block;
+                background: #f6f;
+                text-align: center;
+            }
+            #main {
+                background: #ff6;
+                text-align: center;
+                min-height: 180px;
+                padding-bottom:120px;   /* Height of the footer */
+            }
+            #footer {
+                background: url(/images/footer.gif) fixed center;
+                display: block;
+                text-align: center;
+                position: absolute;
+                bottom:0;
+                width:100%;
+                height:90px;
+                margin-bottom: 50px;
+            }
+            #copyright-container{
+                background: url(/images/footer_30px.gif) fixed center;
+                bottom: 0;
+                position: absolute;
+                width: 100%;
+                
+            }
+            .container {
+                width: 90%;
+                margin: 0 auto;
+                position: relative;
+            }
+            
+            body {
+                min-height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <div>
+                    <nav class="header_master">
+                        
+                        <ul class="header_login">
+                            <li>
+                                <p>Register</p>
+                                <p>Login</p>
+                            </li>
+                        </ul>
+                        
+                        <img src="/images/LogoV.png" id="header_logo">
+                        
+                    </nav>
+                    
+                </div>
+            </div>
+
+            <div id="navmenu">
+                <h1>MENU</h1>
+            </div>
+            <div id="main">
+                <h1>MAIN</h1>
+                <h2>MAIN</h2>
+                <h2>MAIN</h2>
+                <h2>MAIN</h2>
+                <h2>MAIN</h2>
+                <h2>MAIN</h2>
+                <h2>MAIN</h2>
+                <h2>MAIN</h2>
+                <h2>MAIN</h2>
+            </div>
+            <footer id="footer">
+                <h1>FOOTER</h1>
+            </footer>
+            <div id="copyright-container">
+                <div class="container">
+                    <p style="color: #b2c7e8;" >@2016 Marios Georgiou - CSD4020 Project</p>
+                </div>
+            </div>
+        </div>
+        
+        
+    </body>
+</html>
