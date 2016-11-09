@@ -101,6 +101,18 @@
                 padding: 0;
             }
         </style>
+        
+        <script>
+            window.onscroll = function() {myFunction()};
+            function myFunction() {
+                if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+                    document.getElementById("logochange").src="images/onlylogo.png";
+                }
+                else if (document.body.scrollTop < 250 || document.documentElement.scrollTop < 250){
+                    document.getElementById("logochange").src="images/LogoV.png";
+                }
+            }
+        </script>
     </head>
     <body>
         <div id="wrapper">
@@ -108,13 +120,12 @@
                 <div class="header-inner-container">
                     <div>
                         <a href="#" ><h3 class="header_register">Register</h3></a>
-                        <img src="/images/LogoV.png" class="header_logo">
+                        <img src="/images/LogoV.png" class="header_logo" id="logochange">
                         <a href="#" ><h3 class="header_login">Login</h3></a>
                     </div>
                     
                 </div>
             </div>
-
             <div id="navmenu">
                 <h1>MENU</h1>
             </div>
