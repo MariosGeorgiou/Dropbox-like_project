@@ -12,25 +12,25 @@
                 display: block;
                 background: url(/images/header.gif) no-repeat fixed center;
                 background-size: auto;
-                text-align: center;
                 height: 80px;
                 max-width: 100%;
                 width: 100%;
                 box-sizing: border-box;
             }
-            /*
-            #header_image{
-                position: fixed; 
-                top: 0; 
-                left: 0; 
-
-                /* Preserve aspet ratio
-                min-width: 100%;
-                min-height: 100%;
+            .header-inner-container{
+                max-width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                margin: 0 auto;
+                position: relative;
+                text-align: center;
             }
-            */
-            #header_logo {
+            
+            .header_logo {
+                display: inline-block;
                 height: 70px;
+                max-width: 150px;
+                
             }
             .header_master{
                 top: 15px;
@@ -43,7 +43,20 @@
                 z-index: 3;
             }
             .header_login{
-                text-align: right;
+                display: inline-block;
+                height: 20px;
+                width: 80px;
+                float: right;
+                padding-top: 30px;
+                color: 0d285b;
+            }
+            .header_register{
+                display: inline-block;
+                height: 20px;
+                width: 80px;
+                float: left;
+                padding-top: 30px;
+                color: 0d285b;
             }
             #navmenu {
                 display: block;
@@ -73,7 +86,7 @@
                 width: 100%;
                 
             }
-            .container {
+            .copyright-inner-container {
                 width: 90%;
                 margin: 0 auto;
                 position: relative;
@@ -89,19 +102,12 @@
     <body>
         <div id="wrapper">
             <div id="header">
-                <div>
-                    <nav class="header_master">
-                        
-                        <ul class="header_login">
-                            <li>
-                                <p>Register</p>
-                                <p>Login</p>
-                            </li>
-                        </ul>
-                        
-                        <img src="/images/LogoV.png" id="header_logo">
-                        
-                    </nav>
+                <div class="header-inner-container">
+                    <div>
+                        <a href="#" ><h3 class="header_register">Register</h3></a>
+                        <img src="/images/LogoV.png" class="header_logo">
+                        <a href="#" ><h3 class="header_login">Login</h3></a>
+                    </div>
                     
                 </div>
             </div>
@@ -124,7 +130,7 @@
                 <h1>FOOTER</h1>
             </footer>
             <div id="copyright-container">
-                <div class="container">
+                <div class="copyright-inner-container">
                     <p style="color: #b2c7e8;" >@2016 Marios Georgiou - CSD4020 Project</p>
                 </div>
             </div>
