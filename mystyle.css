@@ -1,3 +1,8 @@
+/*Index*/
+
+
+
+
 
             html, body {
                 height: 100%;
@@ -130,7 +135,7 @@
             
             /* main CSS starts here */
             #main {
-                background: #ff6;
+                background: #fafafa;
                 text-align: center;
                 min-height: 180px;
                 padding-bottom:120px;   /* Height of the footer+below footer */
@@ -238,3 +243,83 @@
             /* footer CSS ends here */
             
             
+
+
+
+
+
+/*LOGIN */
+            .login-getstarted{
+                  width: 100%;
+                  height: 450px;
+                
+            }
+            .login-inner-container{
+                width: 45%;
+                height: 90%;
+                margin: 0 auto;
+                position: relative;
+                background-color: #fafafa;
+                padding-top: 100px;
+            }
+.login-inner-container-inside{
+    width: 100%;
+    height: 60%;
+    background-color: #ebeaea;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+            .loginbox-container{
+                float:left;
+                text-align:left;
+                color: #333;
+                font-size: 30px;
+            }
+        .loginbox-form-container{
+                float:left;
+                text-align:left;
+                color: #333;
+                font-size: 20px;
+            padding-top: 90px;
+            }
+.give-me-space{
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+/* REGISTER */
+            .register-getstarted{
+                  width: 100%;
+                  height: 550px;
+                
+            }
+            .register-inner-container{
+                width: 45%;
+                height: 90%;
+                margin: 0 auto;
+                position: relative;
+                background-color: #fafafa;
+                padding-top: 100px;
+            }
+            .register-inner-container-inside{
+                width: 100%;
+                height: 70%;
+                background-color: #ebeaea;
+                padding-left: 20px;
+                padding-top: 10px;
+            }
+            .registerbox-container{
+                float:left;
+                text-align:left;
+                color: #333;
+                font-size: 30px;
+            }
+            .loginbox-form-container{
+                float:left;
+                text-align:left;
+                color: #333;
+                font-size: 20px;
+                padding-top: 90px;
+            }
