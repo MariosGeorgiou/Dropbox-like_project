@@ -1,1 +1,3 @@
+Good references:
 http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page
+http://maxdesign.com.au/articles/liquid/

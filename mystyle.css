@@ -1,7 +1,10 @@
-<html>
-    <head>
-        <title>Mybox</title>
-        <style>
+
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                
+            }
             #wrapper {
                 margin: 0;
                 padding: 0;
@@ -130,7 +133,7 @@
                 background: #ff6;
                 text-align: center;
                 min-height: 180px;
-                padding-bottom:120px;   /* Height of the footer */
+                padding-bottom:120px;   /* Height of the footer+below footer */
             }
             .main-inner-container{
                 width: 90%;
@@ -174,6 +177,39 @@
                 box-shadow: 5px 5px 2px grey;
                 
             }
+            .main-2nd-container_left{
+                float: left;
+                position: absolute;
+                width: 40%;
+                height: 400px;
+                background-color: #333;
+                z-index: 2;
+            }
+            .main-2nd-container_right{
+                position: absolute;
+                width: 100%;
+                height: 400px;
+                background-image: url("/images/designerdesk-27-copy.jpg");
+                background-repeat: no-repeat;
+                background-position: right; 
+                z-index: 1;
+            }
+            .main-2nd-container-text{
+                font-size: 40px;
+                font-family: "Times New Roman", Times, serif;
+                color: lightcyan;
+                float: left;
+                text-align: left;
+            }
+            .main-2nd-container-text-smaller{
+                font-size: 25px;
+            }
+            
+            
+            
+            
+            
+            
             /* main CSS ends here */
             
             /* footer CSS starts here */
@@ -192,7 +228,6 @@
                 bottom: 0;
                 position: absolute;
                 width: 100%;
-                
             }
             .copyright-inner-container {
                 width: 90%;
@@ -203,102 +238,3 @@
             /* footer CSS ends here */
             
             
-            body {
-                min-height: 100%;
-                margin: 0;
-                padding: 0;
-            }
-        </style>
-        
-        <script>
-            /* JS logo change onScroll starts here */
-            window.onscroll = function() {myFunction()};
-            function myFunction() {
-                if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-                    document.getElementById("logochange").src="images/onlylogo.png";
-                }
-                else if (document.body.scrollTop < 250 || document.documentElement.scrollTop < 250){
-                    document.getElementById("logochange").src="images/LogoV.png";
-                }
-            }
-            /* JS logo change onScroll ends here */
-        </script>
-    </head>
-    <body>
-        <div id="wrapper">
-            <div id="header">
-                <div class="header-inner-container">
-                    <div>
-                        <a href="#" ><p class="header_register">Register</p></a>
-                        <img src="/images/LogoV.png" class="header_logo" id="logochange">
-                        <a href="#" ><p class="header_login">Login</p></a>
-                    </div>
-                    
-                </div>
-            </div>
-            <div id="navmenu">
-                <div class="navmenu-inner-container">
-                    <ul>
-                      <li><a href="#">Get Started</a></li>
-                      <li><a href="#">Plans</a></li>
-                      <li><a href="#">Questions?</a></li>
-                    </ul>
-                </div>
-                
-            </div>
-            <div id="main">
-                <div class="main-getstarted">
-                    <div class="main-inner-container">
-                        <div class="main-getstarted-container">
-                            <p class="main-getstarted-container-text"><br />Do more <strong>wherever</strong> <br /> you go</p>
-                            <p>Get to your files from anywhere, on any device, with SafeBox.</p>
-                            <p class= "main-getstarted-container-button"> Register for free</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-                <h1>MAIN</h1>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                
-                <div class="main-questions">
-                    
-                </div>
-                
-                <h3>MAIN</h3>
-                <h3>MAIN</h3>
-            </div>
-            <footer id="footer">
-                <h1>FOOTER</h1>
-            </footer>
-            <div id="copyright-container">
-                <div class="copyright-inner-container">
-                    <p style="color: #b2c7e8;" >@2016 Marios Georgiou - CSD4020 Project</p>
-                </div>
-            </div>
-        </div>
-        
-        
-    </body>
-</html>
