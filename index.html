@@ -3,6 +3,33 @@
         <title>Mybox - Files anywhere</title>
         <link rel="stylesheet" type="text/css" href="mystyle.css">
         <script src="myscripts.js"></script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+        </script>
     </head>
     <body>
         <div id="wrapper">
@@ -19,7 +46,7 @@
             <div id="navmenu">
                 <div class="navmenu-inner-container">
                     <ul>
-                      <li><a href="#get-started">Get Started</a></li>
+                      <li><a href="#get-started">Why SafeBox?</a></li>
                       <li><a href="#">Plans</a></li>
                       <li><a href="#">Questions?</a></li>
                     </ul>
@@ -32,7 +59,7 @@
                         <div class="main-getstarted-container">
                             <p class="main-getstarted-container-text"><br />Do more <strong>wherever</strong> <br /> you go</p>
                             <p>Get to your files from anywhere, on any device, with SafeBox.</p>
-                            <p class= "main-getstarted-container-button" id="get-started"> Register for free</p>
+                            <a href="register.html"> <p class= "main-getstarted-container-button"> Register for free</p><br/><br/><br/><br/><br/><br/><br/><br/><br/ id="get-started"></a>
                         </div>
                         
                     </div>
@@ -43,35 +70,31 @@
                     <div class="main-2nd-inner-container">
                         <div class="main-inner-container">
                             <p class="main-2nd-container-text" >Take your docs anywhere<br/><br/>
-                                <span class="main-2nd-container-text-smaller">Save files on your computer, then access them on
+                                <span class="main-text-smaller">Save files on your computer, then access them on
                                 any computer</span><br/><br/>
-                                <span class="main-2nd-container-text-smaller" ><b>It's that simple.</b></span></p>
+                                <span class="main-text-smaller" ><b>It's that simple.</b></span></p>
                         </div>
                     </div>
                 </div>
-                <div class="main-2nd-container_right">
-                    <div class="main-inner-container">
-                        
+                <div class="main-2nd-container_image">
+                </div>
+                
+                <div class="main-3rd-container_text">
+                    
+                    <div class="main-3rd-container_image"> 
                     </div>
+                    <div class="space">
+                    </div>
+                    <p class="main-3rd-container-text">Keep your photos safe<br/><br/><span class="main-text-smaller">Backup vacation photos, your wedding day memories, your kid's first birthday pictures and all other important memories.<br/><br/> Back them up... NOW</span><br/><br/> </p>
                 </div>
                 
                 
-                <h1>MAIN</h1>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
-                <h2>MAIN</h2>
+                
+                
+                
+                
+
+
                 <h2>MAIN</h2>
                 <h2>MAIN</h2>
                 <h2>MAIN</h2>
@@ -85,7 +108,7 @@
                 </div>
                 
                 <h3>MAIN</h3>
-                <h3>MAIN</h3>
+                <h3></h3>
             </div>
             <footer id="footer">
                 <h1>FOOTER</h1>
