@@ -4,6 +4,14 @@
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="mystyle.css">
         <script src="myscripts.js"></script> 
+        
+        <!-- jQuery  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        
+        <!-- jQuery UI  -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+            
     </head>
     <body>
         <div id="wrapper">
@@ -28,86 +36,32 @@
             <div id="main">
                 <div class="register-getstarted">
                     <div class="register-inner-container">
-                        <div class="register-inner-container-inside">
+                        
 
-                            <p class="registerbox-container"><b>Register<br/></b></p>
+                            <b>Register<br/></b>
                             
-                            <form action="" method="post" class="loginbox-form-container">
-                            
-                        <table class="give-me-space">
-                    <tr width="200px" align="left">
-                        <td>
-                            First Name: 
-                        </td>  
-                        <td>
-                            <input type="text" name="firstname"  required="required" size="30"></input>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Last Name:
-                        </td>  
-                        <td>
-                            <input type="text" name="lastname"  required="required" size="30"></input>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><br/></td></tr>
-                    
-                    <tr>
-                        <td  valign="top" align="left">
-                            Email Address:
-                        </td>
-                        <td>
-                            <input type="email" name="customer_username" required="required" size="30"></input>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Retype Email Address:
-                        </td>  
-                        <td>
-                            <input type="email" name="username_check" required="required" size="30"></input>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Password :
-                        </td>  
-                        <td>
-                            <input type="password" name="customer_password" required="required" size="30"></input>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Retype Password :
-                        </td>  
-                        <td>
-                            <input type="password" name="password_check" required="required" size="30"></input>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><br/></td></tr>
-                    <tr>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            <input type="submit" value="Register Now"></input>
-                        </td>
-                            
-                    </tr> 
-                
-              
-                </table>
+                            <form method="POST" action="dashboard.html" onsubmit="return validateForm()" name="registerForm" class="loginbox-form-container">
+                            Full Name<br>
+                            <input type="text" name="fullname" placeholder="Name"  required>
+                            <br><br>Email Address<br>
+                            <input type="email" name="customer_username" placeholder="Email" required>
+                            <br>Password<br>
+                            <input type="password" name="password" placeholder="Password" required>
+                            <br>Retype Password<br>
+                            <input type="password" name="confirm_password" placeholder="Confirm Password" required><br>
+                                <div id="password_error" style="color:red;"></div><br>
+                            <input type="submit" value="Register Now" id="registerbutton">
                             </form>
-                        </div>
+                        
                     </div>
                 </div>
                 
             </div>
             <footer id="footer">
-                <h1>FOOTER</h1>
+                <p class="footer-content"></p>
+                <p class="footer-content"><b id="contactus">Contact Us</b>
+                    <br>+44 2333444555<br>support@safebox.org<br><br> <img src="images/email-xxl.png" height="35px" width="35px"> <img src="images/dotsmall.png" class="dot" height="30px" width="12px"> <img src="images/twitter-xxl.png" height="35px" width="35px"> <img src="images/dotsmall.png" class="dot" height="30px" width="12px"> <img src="images/facebook-3-xxl.png" height="35px" width="35px"> <img src="images/dotsmall.png" class="dot" height="30px" width="12px"> <img src="images/instagram-xxl.png" height="35px" width="35px"> </p>
+                <p class="footer-content"></p>
             </footer>
             <div id="copyright-container">
                 <div class="copyright-inner-container">
@@ -119,3 +73,34 @@
         
     </body>
 </html>
+<script>
+/*
+    $("document").ready(function(){
+        
+         $("input[type='submit']#registerbutton").onclick(function(){
+            $(this).css("background-color", "red");
+         });   
+        
+    });
+*/
+    
+    /*  Confirm that passwords match  */
+    var password = document.forms["registerForm"]["password"];
+    var confirm_password = document.forms["registerForm"]["confirm_password"];
+    var password_error = document.getElementById("password_error");
+
+    function validateForm(){
+        if (password.value != confirm_password.value){
+            password.style.border = "1px solid red";
+            confirm_password.style.border = "1px solid red";
+            password_error.innerHTML = "*Passwords do not match";
+            return false;
+        }
+        else{
+            password.style.border = "1px solid black";
+            confirm_password.style.border = "1px solid black";
+            password_error.innerHTML = "";
+            return true;
+        }
+    }
+</script>

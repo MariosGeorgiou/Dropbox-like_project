@@ -4,7 +4,7 @@
                 height: 100%;
                 margin: 0;
                 padding: 0;
-                
+                background-color: #fafafa;
             }
             #wrapper {
                 margin: 0;
@@ -131,10 +131,14 @@
                 text-align: center;
                 padding: 14px 56px;
                 text-decoration: none;
+                border-left: solid 2px black;
             }
-
+            li:last-child  a{
+                border-right: solid 2px black;
+            }
             li a:hover {
                 background-color: #111;
+                font: bolt;
             }
 /* navigation menu CSS ends here */
             
@@ -147,7 +151,7 @@
                 background: #fafafa;
                 text-align: center;
                 min-height: 180px;
-                padding-bottom:120px;   /* Height of the footer+below footer */
+                padding-bottom:180px;   /* Height of the footer+below footer */
                 
             }
             .main-inner-container{
@@ -193,7 +197,7 @@
                 box-shadow: 5px 5px 2px grey;
                 
             }
-            .main-2nd-container_left{
+            #main-container-leftText-rightImage{
                 display: block;
                 float: left;
                 position: absolute;
@@ -257,6 +261,7 @@
             .space{
                 height: 400px;
                 width: 50px;
+                position: relative;
                 background-color: #333;
                 position: relative;
                 float: left;
@@ -264,11 +269,34 @@
             }
             .main-3rd-container-text{
                 font-size: 40px;
+                position: relative;
                 font-family: "Times New Roman", Times, serif;
                 color: lightcyan;
                 text-align: left;
                 padding-right: 40px;
             }
+            .main-4th-background{
+                padding-top: 400px;
+                width: 100%;
+                height: 320px;
+                position:relative;
+                background-color:#dae2ef; 
+            }       
+.main-4th-container{
+                display: block;
+                position: relative;
+                width: 100%;
+                height: 300px;
+                float:left;
+                background-image: url("ribbon.png");
+                background-image: -webkit-linear-gradient(left, 
+                    rgba(255,255,255,0.1) 10%, 
+                    rgba(255,255,255,0.1) 80%
+                  ),
+                  url(ribbon.png);
+                background-repeat: no-repeat;
+                z-index: 1;
+}
 /* main CSS ends here */
             
 
@@ -282,8 +310,14 @@
                 position: absolute;
                 bottom:0;
                 width:100%;
-                height:90px;
+                height:150px;
                 margin-bottom: 50px;
+            }
+            .footer-content{
+                float:left;
+                width: 33%;
+                font-size: 18px;
+                
             }
             #copyright-container{
                 background: url(images/footer_30px.gif) fixed center;
@@ -296,7 +330,12 @@
                 margin: 0 auto;
                 position: relative;
             }
-            
+            .dot{
+                vertical-align: middle;
+            }
+            #contactus{
+                font-size: 25px;
+            }
 /* footer CSS ends here */
             
             
@@ -309,41 +348,35 @@
             .login-getstarted{
                   width: 100%;
                   height: 450px;
-                
             }
             .login-inner-container{
-                width: 45%;
-                height: 90%;
+                width: 450px;
+                height: 300px;
                 margin: 0 auto;
-                position: relative;
-                background-color: #fafafa;
-                padding-top: 100px;
+                margin-top: 80px;
+                background-color: #ebeaea;
+                border-radius: 4px;
+                text-align: center;
+                padding-top: 10px;
+                font-size: 28px;
             }
-.login-inner-container-inside{
-    width: 100%;
-    height: 60%;
-    background-color: #ebeaea;
+.login-inner-container input{
+    height: 40px;
+    width: 320px;
+    font-size: 18px;
+    margin-bottom: 15px;
     padding-left: 20px;
-    padding-top: 10px;
 }
-            .loginbox-container{
-                float:left;
-                text-align:left;
-                color: #333;
-                font-size: 30px;
-            }
-        .loginbox-form-container{
-                float:left;
-                text-align:left;
-                color: #333;
-                font-size: 20px;
-            padding-top: 90px;
-            }
-.give-me-space{
-    margin-right: 20px;
-    margin-bottom: 20px;
+.login-inner-container input[type="submit"]{
+    margin-top: 10px;
+    height: 40px;
+    width: 100px;
+    padding: 0px;
+    background-color: #2ecc71;
+    border-radius: 4px;
+    border: none;
+    border-bottom: 4px solid #27AE60;
 }
-
 
 
 /* REGISTER */
@@ -353,32 +386,42 @@
                 
             }
             .register-inner-container{
-                width: 45%;
-                height: 90%;
+                width: 450px;
+                height: 450px;
                 margin: 0 auto;
-                position: relative;
-                background-color: #fafafa;
-                padding-top: 100px;
-            }
-            .register-inner-container-inside{
-                width: 100%;
-                height: 70%;
+                margin-top: 80px;
                 background-color: #ebeaea;
-                padding-left: 20px;
+                border-radius: 4px;
+                text-align: center;
                 padding-top: 10px;
+                font-size: 28px;
             }
-            .registerbox-container{
-                float:left;
-                text-align:left;
-                color: #333;
-                font-size: 30px;
-            }
+.register-inner-container input{
+    height: 30px;
+    width: 320px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+.register-inner-container input[type="submit"]{
+    margin-top: 10px;
+    height: 40px;
+    width: 150px;
+    padding: 0px;
+    background-color: #2ecc71;
+    border-radius: 4px;
+    border: none;
+    border-bottom: 4px solid #27AE60;
+    margin-left: 80px;
+}
+
             .loginbox-form-container{
-                float:left;
                 text-align:left;
                 color: #333;
                 font-size: 20px;
-                padding-top: 90px;
+                padding-top: 30px;
+                margin-left: 60px;
+                
             }
 
 
