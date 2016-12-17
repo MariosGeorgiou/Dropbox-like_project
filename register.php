@@ -1,3 +1,32 @@
+<?php 
+    session_start();
+    
+    //connect to database
+    include 'inc/connectdb.php';
+    
+    if (isset($_POST['register_button'])){
+        session_start();
+        $name = mysqli_real_escape_string($db, $_POST['name']);
+        $email = mysqli_real_escape_string($db, $_POST['email']);
+        $password = mysqli_real_escape_string($db, $_POST['password']);
+        $confirm_password = mysqli_real_escape_string($db, $_POST['confirm_password']);
+        
+        if ($password == $confirm_password){
+            //create user
+            $password = md5($password); //hash password before storing
+            $sql = "INSERT INTO users(name, email, password) VALUES('$name', '$email', '$password')";
+            mysqli_query($db, $sql);
+            $_SESSION['email'] = $email;
+            header("location: dashboard.php"); 
+        }
+        else{
+            $_SESSION['message'] = "The two passwords do not match";
+        }
+    }
+
+?>
+
+
 <html>
     <head>
         <title>Mybox - Register</title>
@@ -18,9 +47,9 @@
             <div id="header">
                 <div class="header-inner-container">
                     <div>
-                        <a href="register.html" ><p class="header_register">Register</p></a>
+                        <a href="register.php" ><p class="header_register">Register</p></a>
                         <a href="index.html"><img src="images/LogoV.png" class="header_logo" id="logochange"></a>
-                        <a href="login.html" ><p class="header_login">Login</p></a>
+                        <a href="login.php" ><p class="header_login">Login</p></a>
                     </div>
                     
                 </div>
@@ -40,17 +69,17 @@
 
                             <b>Register<br/></b>
                             
-                            <form method="POST" action="dashboard.html" onsubmit="return validateForm()" name="registerForm" class="loginbox-form-container">
+                            <form method="POST" action="register.php" onsubmit="return validateForm()" name="registerForm" class="loginbox-form-container">
                             Full Name<br>
-                            <input type="text" name="fullname" placeholder="Name"  required>
+                            <input type="text" name="name" placeholder="Name"  required>
                             <br><br>Email Address<br>
-                            <input type="email" name="customer_username" placeholder="Email" required>
+                            <input type="email" name="email" placeholder="Email" required>
                             <br>Password<br>
                             <input type="password" name="password" placeholder="Password" required>
                             <br>Retype Password<br>
                             <input type="password" name="confirm_password" placeholder="Confirm Password" required><br>
                                 <div id="password_error" style="color:red;"></div><br>
-                            <input type="submit" value="Register Now" id="registerbutton">
+                            <input type="submit" value="Register Now" name="register_button">
                             </form>
                         
                     </div>

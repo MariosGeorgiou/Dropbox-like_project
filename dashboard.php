@@ -1,6 +1,16 @@
+<?php
+    session_start();
+    if ($_SESSION['email']){
+
+    }
+    else{
+        header("location: index.html");
+    }
+
+?>
 <html>
     <head>
-        <title>Mybox - Login</title>
+        <title>Mybox - My Dashboard</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="mystyle.css">
         <script src="myscripts.js"></script> 
@@ -10,36 +20,26 @@
             <div id="header">
                 <div class="header-inner-container">
                     <div>
-                        <a href="register.html" ><p class="header_register">Register</p></a>
-                        <a href="index.html"><img src="images/LogoV.png" class="header_logo" id="logochange"></a>
-                        <a href="login.html" ><p class="header_login">Login</p></a>
+                        <p class="header_register" style="visibility: hidden;"></p>
+                        <img src="images/LogoV.png" class="header_logo" id="logochange">
+                        <a href="logout.php" ><p class="header_login">Logout</p></a>
                     </div>
                     
                 </div>
             </div>
             <div id="navmenu">
                 <div class="navmenu-inner-container">
-                    <ul>
-                      <li><a href="index.html">Back to Home</a></li>
+                    <ul class="dashnav_ul">
+                      <li class="dashnav_li"><?php echo $_SESSION['email']; ?> Dashboard</li>
+                      
                     </ul>
                 </div>
                 
             </div>
             <div id="main">
-                <div class="login-getstarted">
-                    <div class="login-inner-container">
-                        
-
-                            <p><b>User Login<br/></b></p>
-                            <form action="" method="post" >
-                            <input type="email" name="email" size="35" placeholder="Enter Username" required><br>
-                            <input type="password" name="password" size="35" height="48px" placeholder="Enter Password" required><br>
-                            <input type="submit" value="Login" class="login-button">
-                            </form>
-                       
-                    </div>
-                </div>
+                <div >
                 
+                </div>
             </div>
             <footer id="footer">
                 <p class="footer-content"></p>
