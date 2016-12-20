@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    
+    $error="";
     //connect to database
     include 'inc/connectdb.php';
     
@@ -10,17 +10,18 @@
         $email = mysqli_real_escape_string($db, $_POST['email']);
         $password = mysqli_real_escape_string($db, $_POST['password']);
         $confirm_password = mysqli_real_escape_string($db, $_POST['confirm_password']);
-        
+
         if ($password == $confirm_password){
             //create user
             $password = md5($password); //hash password before storing
             $sql = "INSERT INTO users(name, email, password) VALUES('$name', '$email', '$password')";
             mysqli_query($db, $sql);
             $_SESSION['email'] = $email;
+            $_SESSION['name'] = $name;
             header("location: dashboard.php"); 
-        }
+        } //connect to db
         else{
-            $_SESSION['message'] = "The two passwords do not match";
+            $error = "The two passwords do not match";
         }
     }
 
@@ -31,16 +32,16 @@
     <head>
         <title>Mybox - Register</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="mystyle.css">
-        <script src="myscripts.js"></script> 
+        <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+        <script type="text/javascript" src="js/myscripts.js"></script> 
+
         
         <!-- jQuery  -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         
         <!-- jQuery UI  -->
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-            
+        
     </head>
     <body>
         <div id="wrapper">
@@ -48,7 +49,7 @@
                 <div class="header-inner-container">
                     <div>
                         <a href="register.php" ><p class="header_register">Register</p></a>
-                        <a href="index.html"><img src="images/LogoV.png" class="header_logo" id="logochange"></a>
+                        <a href="index.php"><img src="images/LogoV.png" class="header_logo" id="logochange"></a>
                         <a href="login.php" ><p class="header_login">Login</p></a>
                     </div>
                     
@@ -57,7 +58,7 @@
             <div id="navmenu">
                 <div class="navmenu-inner-container">
                     <ul>
-                      <li><a href="index.html">Back to Home</a></li>
+                      <li><a href="index.php">Back to Home</a></li>
                     </ul>
                 </div>
                 
@@ -75,10 +76,10 @@
                             <br><br>Email Address<br>
                             <input type="email" name="email" placeholder="Email" required>
                             <br>Password<br>
-                            <input type="password" name="password" placeholder="Password" required>
+                            <input type="password" name="password" id="password-1" placeholder="Password" required>
                             <br>Retype Password<br>
                             <input type="password" name="confirm_password" placeholder="Confirm Password" required><br>
-                                <div id="password_error" style="color:red;"></div><br>
+                                <div id="password_error" style="color:red;"><?php echo $error; ?></div><br>
                             <input type="submit" value="Register Now" name="register_button">
                             </form>
                         
@@ -103,15 +104,7 @@
     </body>
 </html>
 <script>
-/*
-    $("document").ready(function(){
-        
-         $("input[type='submit']#registerbutton").onclick(function(){
-            $(this).css("background-color", "red");
-         });   
-        
-    });
-*/
+    
     
     /*  Confirm that passwords match  */
     var password = document.forms["registerForm"]["password"];

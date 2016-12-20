@@ -2,8 +2,8 @@
     <head>
         <title>Mybox - Files anywhere</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="mystyle.css">
-        <script src="myscripts.js"></script> 
+        <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+        <script type="text/javascript" src="js/myscripts.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script>
         $(document).ready(function(){
@@ -38,7 +38,7 @@
                 <div class="header-inner-container">
                     <div>
                         <a href="register.php" ><p class="header_register">Register</p></a>
-                        <a href="index.html"><img src="images/LogoV.png" class="header_logo" id="logochange"></a>
+                        <a href="index.php"><img src="images/LogoV.png" class="header_logo" id="logochange"></a>
                         <a href="login.php" ><p class="header_login">Login</p></a>
                     </div>
                     
@@ -86,7 +86,7 @@
                     </div>
                     <div class="space">
                     </div>
-                    <p class="main-3rd-container-text">Keep your photos safe<br/><br/><span class="main-text-smaller">Backup vacation photos, your wedding day memories, your kid's first birthday pictures and all other important memories.<br/><br/> Back them up... NOW</span><br/><br/> </p>
+                    <p class="main-3rd-container-text">Keep your photos safe<br/><br/><span class="main-text-smaller">Backup vacation photos, your wedding day memories, your kid's first birthday pictures and all other important memories.<br/><br/> Back them up... with SafeBox</span><br/><br/> </p>
                 </div>
                 
                 <div class="main-4th-background">

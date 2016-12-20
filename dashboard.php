@@ -12,8 +12,8 @@
     <head>
         <title>Mybox - My Dashboard</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="mystyle.css">
-        <script src="myscripts.js"></script> 
+        <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+        <script type="text/javascript" src="js/myscripts.js"></script> 
     </head>
     <body>
         <div id="wrapper">
@@ -30,7 +30,7 @@
             <div id="navmenu">
                 <div class="navmenu-inner-container">
                     <ul class="dashnav_ul">
-                      <li class="dashnav_li"><?php echo $_SESSION['email']; ?> Dashboard</li>
+                      <li class="dashnav_li"><?php echo $_SESSION['name']; ?>'s Dashboard</li>
                       
                     </ul>
                 </div>

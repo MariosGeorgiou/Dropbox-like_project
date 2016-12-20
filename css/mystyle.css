@@ -19,7 +19,7 @@
 /* header CSS starts here */
             #header {
                 display: block;
-                background: url(images/header.gif) no-repeat fixed center;
+                background: url(../images/header.gif) no-repeat fixed center;
                 background-size: auto;
                 height: 80px;
                 max-width: 100%;
@@ -164,7 +164,7 @@
                   height: 450px;
                 
 
-                  background-image: url(images/main_image.jpeg) fixed center;
+                  background-image: url(../images/main_image.jpeg) fixed center;
                 background-repeat: no-repeat;
                   background-image: -webkit-linear-gradient(left, 
                     rgba(255,255,255,0.9) 10%, 
@@ -172,7 +172,7 @@
                     rgba(255,255,255,0.7) 90%,
                     rgba(255,255,255,1) 100%
                   ),
-                  url(images/main_image.jpeg);
+                  url(../images/main_image.jpeg);
             }
             .main-getstarted-container{
                 float: left;
@@ -211,12 +211,12 @@
                 position: relative;
                 width: 100%;
                 height: 400px;
-                background-image: url("images/designerdesk-27-copy.jpg");
+                background-image: url("../images/designerdesk-27-copy.jpg");
                 background-image: -webkit-linear-gradient(left, 
                     rgba(255,255,255,0.1) 10%, 
                     rgba(255,255,255,0.1) 90%
                   ),
-                  url(images/designerdesk-27-copy.jpg);
+                  url(../images/designerdesk-27-copy.jpg);
                 background-repeat: no-repeat;
                 background-position: right; 
                 z-index: 1;
@@ -249,12 +249,12 @@
                 width: 55%;
                 height: 400px;
                 float:left;
-                background-image: url("images/family-vacation.jpg");
+                background-image: url("../images/family-vacation.jpg");
                 background-image: -webkit-linear-gradient(left, 
                     rgba(255,255,255,0.1) 10%, 
                     rgba(255,255,255,0.1) 80%
                   ),
-                  url(images/family-vacation.jpg);
+                  url(../images/family-vacation.jpg);
                 background-repeat: no-repeat;
                 z-index: 1;
             }
@@ -288,12 +288,12 @@
                 width: 100%;
                 height: 300px;
                 float:left;
-                background-image: url("ribbon.png");
+                background-image: url("../ribbon.png");
                 background-image: -webkit-linear-gradient(left, 
                     rgba(255,255,255,0.1) 10%, 
                     rgba(255,255,255,0.1) 80%
                   ),
-                  url(ribbon.png);
+                  url(../ribbon.png);
                 background-repeat: no-repeat;
                 z-index: 1;
 }
@@ -304,7 +304,7 @@
 
 /* footer CSS starts here */
             #footer {
-                background: url(images/footer.gif) fixed center;
+                background: url(../images/footer.gif) fixed center;
                 display: block;
                 text-align: center;
                 position: absolute;
@@ -320,7 +320,7 @@
                 
             }
             #copyright-container{
-                background: url(images/footer_30px.gif) fixed center;
+                background: url(../images/footer_30px.gif) fixed center;
                 bottom: 0;
                 position: absolute;
                 width: 100%;

@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    
+    $error = "";
     //connect to database
     include 'inc/connectdb.php';
     
@@ -12,11 +12,16 @@
         $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
         $result = mysqli_query($db, $sql);
         if (mysqli_num_rows($result) == 1){
+            //get the name to personalise page
+            $sql = "SELECT name FROM users WHERE email='$email'";
+            $result2 = mysqli_query($db, $sql);
+            $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+            $_SESSION['name'] = $row['name'];
             $_SESSION['email'] = $email;
             header("location: dashboard.php"); 
         }
         else{
-            $_SESSION['message'] = "Username/password combination incorrect";
+            $error = "Username/password combination incorrect";
         }
     }
 
@@ -27,8 +32,8 @@
     <head>
         <title>Mybox - Login</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="mystyle.css">
-        <script src="myscripts.js"></script> 
+        <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+        <script type="text/javascript" src="js/myscripts.js"></script> 
     </head>
     <body>
         <div id="wrapper">
@@ -36,7 +41,7 @@
                 <div class="header-inner-container">
                     <div>
                         <a href="register.php" ><p class="header_register">Register</p></a>
-                        <a href="index.html"><img src="images/LogoV.png" class="header_logo" id="logochange"></a>
+                        <a href="index.php"><img src="images/LogoV.png" class="header_logo" id="logochange"></a>
                         <a href="login.php" ><p class="header_login">Login</p></a>
                     </div>
                     
@@ -45,7 +50,7 @@
             <div id="navmenu">
                 <div class="navmenu-inner-container">
                     <ul>
-                      <li><a href="index.html">Back to Home</a></li>
+                      <li><a href="index.php">Back to Home</a></li>
                     </ul>
                 </div>
                 
@@ -60,8 +65,9 @@
                             <input type="email" name="email" placeholder="Enter Username" required><br>
                             <input type="password" name="password" placeholder="Enter Password" required><br>
                             <input type="submit" value="Login" name="login_button" class="login_button">
+                                <div style="color: red; font-size: 20px;"><?php echo $error; ?></div>
                             </form>
-                       
+
                     </div>
                 </div>
                 

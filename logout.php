@@ -1,14 +1,20 @@
 <?php
-session_start();
-session_destroy();
+    session_start();
+    if ($_SESSION['email']){
+        session_unset();
+        session_destroy();
+    }
+    else{
+        header("location: index.php");
+    }
 ?>
 <html>
 <head>
     <title>Mybox - My Dashboard</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <script src="myscripts.js"></script>
-    <meta http-equiv="refresh" content="5;url=index.html" />
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <script type="text/javascript" src="js/myscripts.js"></script>
+    <meta http-equiv="refresh" content="5;url=index.php" />
 </head>
 <body>
 <div id="wrapper">
@@ -25,7 +31,7 @@ session_destroy();
     <div id="navmenu">
         <div class="navmenu-inner-container">
             <ul>
-                <li><a href="index.html">Back to Home</a></li>
+                <li><a href="index.php">Back to Home</a></li>
             </ul>
         </div>
 
@@ -38,6 +44,7 @@ session_destroy();
             <p>
                 Redirecting to Home Page...
             </p>
+            <img src="images/loading.gif" width="50px" height="50px">
         </div>
     </div>
     <footer id="footer">
