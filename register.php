@@ -14,11 +14,25 @@
         if ($password == $confirm_password){
             //create user
             $password = md5($password); //hash password before storing
+            $email = strtolower($email); //set the email to lowercase letters
             $sql = "INSERT INTO users(name, email, password) VALUES('$name', '$email', '$password')";
             mysqli_query($db, $sql);
             $_SESSION['email'] = $email;
             $_SESSION['name'] = $name;
-            header("location: dashboard.php"); 
+
+            //create table for the user to upload the files
+            include 'inc/connectfiledb.php';
+            if ($db->connect_error) {
+                die("Connection failed: " . $db->connect_error);
+            }
+            $sql = "CREATE TABLE `$email` (
+            id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            file VARCHAR(200) NOT NULL,
+            filety VARCHAR(50) NOT NULL
+            )";
+            mysqli_query($db, $sql);
+
+            header("location: dashboard.php");
         } //connect to db
         else{
             $error = "The two passwords do not match";

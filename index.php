@@ -6,11 +6,11 @@
         <script type="text/javascript" src="js/myscripts.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script>
+            //script from http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
         $(document).ready(function(){
           // Add smooth scrolling to all links
           $("a").on('click', function(event) {
 
-            // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== "") {
               // Prevent default anchor click behavior
               event.preventDefault();
@@ -19,7 +19,8 @@
               var hash = this.hash;
 
               // Using jQuery's animate() method to add smooth page scroll
-              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              // The optional number (800) specifies the number of milliseconds it takes to scroll
+                // to the specified area
               $('html, body').animate({
                 scrollTop: $(hash).offset().top
               }, 800, function(){
@@ -47,9 +48,9 @@
             <div id="navmenu">
                 <div class="navmenu-inner-container">
                     <ul>
-                      <li><a href="#get-started">Why SafeBox?</a></li>
-                      <li><a href="#">Plans</a></li>
-                      <li><a href="#contactus">Questions?</a></li>
+                      <li><a href="#get-started">Why SafeBox</a></li>
+                        <li><a href="#cost">Cost</a></li>
+                      <li><a href="#contactus">Questions</a></li>
                     </ul>
                 </div>
                 
@@ -88,20 +89,24 @@
                     </div>
                     <p class="main-3rd-container-text">Keep your photos safe<br/><br/><span class="main-text-smaller">Backup vacation photos, your wedding day memories, your kid's first birthday pictures and all other important memories.<br/><br/> Back them up... with SafeBox</span><br/><br/> </p>
                 </div>
-                
+
+
                 <div class="main-4th-background">
                     <div class="main-4th-container">
-                
+                        <div class="main-4th-container">
+                            
+                        </div>
                     </div>
+                    
                 </div>
-                
+
                 
             </div>
             <footer id="footer">
                 <p class="footer-content"></p>
                 <p class="footer-content"><b id="contactus">Contact Us</b>
                     <br>+44 2333444555<br>support@safebox.org<br><br> <img src="images/email-xxl.png" height="35px" width="35px"> <img src="images/dotsmall.png" class="dot" height="30px" width="12px"> <img src="images/twitter-xxl.png" height="35px" width="35px"> <img src="images/dotsmall.png" class="dot" height="30px" width="12px"> <img src="images/facebook-3-xxl.png" height="35px" width="35px"> <img src="images/dotsmall.png" class="dot" height="30px" width="12px"> <img src="images/instagram-xxl.png" height="35px" width="35px"> </p>
-                <p class="footer-content"></p>
+                <p class="footer-content" id="cost"></p>
             </footer>
             <div id="copyright-container">
                 <div class="copyright-inner-container">

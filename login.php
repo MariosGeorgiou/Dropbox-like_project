@@ -8,7 +8,8 @@
         $email = mysqli_real_escape_string($db, $_POST['email']);
         $password = mysqli_real_escape_string($db, $_POST['password']);
         
-        $password = md5($password); 
+        $password = md5($password);
+        $email = strtolower($email); //set the email to lowercase letters
         $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
         $result = mysqli_query($db, $sql);
         if (mysqli_num_rows($result) == 1){
@@ -62,7 +63,7 @@
 
                             <p><b>User Login<br/></b></p>
                             <form action="login.php" method="POST" >
-                            <input type="email" name="email" placeholder="Enter Username" required><br>
+                            <input type="email" name="email" placeholder="Enter Email" required><br>
                             <input type="password" name="password" placeholder="Enter Password" required><br>
                             <input type="submit" value="Login" name="login_button" class="login_button">
                                 <div style="color: red; font-size: 20px;"><?php echo $error; ?></div>
