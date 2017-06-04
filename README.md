@@ -7,7 +7,12 @@ Click [here](http://my-safebox.000webhostapp.com/index.php) or copy and paste th
 # Screenshots
 
 Index Page
-![test results](https://github.com/MariosGeorgiou/Dropbox-like_project/blob/master/screenshots/index_screenshot.jpeg)
+![index](https://github.com/MariosGeorgiou/Dropbox-like_project/blob/master/screenshots/index_screenshot.jpeg)
 
 Login Page
-![test results](https://github.com/MariosGeorgiou/Dropbox-like_project/blob/master/screenshots/login_screenshot.jpg)
+
+![login](https://github.com/MariosGeorgiou/Dropbox-like_project/blob/master/screenshots/login_screenshot.jpg)
+
+
+Register Page
+![login](https://github.com/MariosGeorgiou/Dropbox-like_project/blob/master/screenshots/register_screenshot.png)
